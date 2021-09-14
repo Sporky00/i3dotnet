@@ -1,0 +1,118 @@
+[colors]
+bar = #96333333
+text = #fff
+special = #FF91aeff
+
+[bar/top]
+width = 100%
+height = 20
+fixed-center = true
+
+background = ${colors.bar}
+foreground = ${colors.text}
+
+line-size = 1
+line-color = ${colors.special}
+
+padding-left = 3
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = NotoSans-Regular:size=8;2
+
+tray-position = right
+tray-padding = 2
+
+modules-left = i3
+modules-center = date
+modules-right = alsa powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-underline= ${colors.special}
+label-focused-padding = 0
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 0
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-padding = 0
+
+; Separator in between workspaces
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = ${colors.special}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "  %Y-%m-%d"
+time = %H:%M
+
+label = %time% %date%
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume>
+label-volume = loudnessness %percentage%%
+label-volume-foreground = ${colors.text}
+
+format-muted-prefix = "mooted "
+format-muted-foreground = ${colors.text}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+format-spacing = 1
+
+label-open = power
+label-open-foreground = #ff9191
+
+label-close = cancel
+label-close-foreground = ${colors.special}
+
+label-separator = |
+label-separator-foreground = ${colors.text}
+
+menu-0-0 = off and on again
+menu-0-0-exec = menu-open-1
+menu-0-1 = poo off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = pussy out
+menu-1-0-exec = menu-open-0
+menu-1-1 = im sure
+menu-1-1-exec = reboot
+
+menu-2-0 = pusso out
+menu-2-0-exec = menu-open-0
+menu-2-1 = im sure
+menu-2-1-exec = poweroff
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
