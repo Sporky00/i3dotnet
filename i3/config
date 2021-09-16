@@ -141,22 +141,25 @@ gaps outer 5
 bindsym $mod+r mode "resize"
 
 #nvidia settings
-exec_always --no-startup-id nvidia-settings --load-config-only
+exec --no-startup-id nvidia-settings --load-config-only
 
 #Polkit (Used to launch GUI applications as root)
-exec_always --no-startup-id /usr/bin/lxpolkit
+exec --no-startup-id /usr/bin/lxpolkit
 
 #Display Wallpaper
 exec feh --bg-scale /home/max/Pictures/wallpaper.jpg
 
 #Compositor
-exec_always --no-startup-id picom -b
+exec --no-startup-id picom -b
 
 #monitor config
 exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 # Polybar Launch Script
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh 
+
+#autostart
+exec --no-startup-id spotify 
 
 #You should keep both the above lines of code for an application if you want to launch an application with a keybinding
 #and simultaneously move to that workspace. Make sure the workspace numbers are same.
