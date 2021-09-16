@@ -33,13 +33,6 @@ bindsym $mod+Shift+q kill
 
 # A more modern dmenu replacement is rofi:
 bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -icon-theme "Tela-circle" -show-icons
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -63,9 +56,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -147,27 +140,23 @@ gaps outer 5
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available). Commented out due to use of polybar. If you want to
-#use i3 bars (status or blocks) this is how you can do it.
-#bar {
-        #status_command i3status
-        #tray_output primary
-        #status_command i3status -c ~/.config/i3/i3status.conf
-        #status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#}
+#nvidia settings
+exec_always --no-startup-id nvidia-settings --load-config-only
 
 #Polkit (Used to launch GUI applications as root)
 exec_always --no-startup-id /usr/bin/lxpolkit
 
 #Display Wallpaper
-exec_always feh --bg-scale /home/abe/Pictures/amongos.png
+exec feh --bg-scale /home/max/Pictures/wallpaper.jpg
 
 #Compositor
-exec_always --no-startup-id picom -f
+exec_always --no-startup-id picom -b
 
-#Lock Screen
-bindsym $mod+x exec betterlockscreen -l
+#monitor config
+exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-0 --off --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+
+# Polybar Launch Script
+exec_always --no-startup-id sh ~/.config/polybar/launch.sh 
 
 #You should keep both the above lines of code for an application if you want to launch an application with a keybinding
 #and simultaneously move to that workspace. Make sure the workspace numbers are same.
@@ -176,17 +165,6 @@ bindsym $mod+x exec betterlockscreen -l
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
-
-#Multi Monitor (Dual Monitor, extended monitor)
-#Replace HDMI2 with DVI-2, VGA-2, DP-2, DVI-2 etc. Get value by typing xrandr in the terminal.
-#If X is a natural number, then;
-#eDP-X is the display used in Laptops.
-#HDMI-X is display used in Desktop connected to monitor with HDMI Cable.
-#VGA-X is display used in Desktop connected to monitor with VGA Cable.
-exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
-
-# Polybar Launch Script
-exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 #custom binds
 bindsym $mod+c exec nautilus

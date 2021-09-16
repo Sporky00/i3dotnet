@@ -1,2 +1,2 @@
 killall -q polybar
-polybar top
+polybar top &
