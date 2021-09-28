@@ -1,0 +1,37 @@
+packages 2 install
+
+arandr
+ark
+bashtop
+bleachbit
+dialog
+eog
+feh
+fish
+gnome-disk
+gnome-keyring
+i3-gaps
+kitty
+lxapperance
+nautalis
+neofetch
+noto-fonts
+nvidia
+nvidia-utils
+obs-nvfbc
+obs-studio
+pamac-aur
+pavucontrol
+picom-ibhagwan
+polybar
+qemu
+rofi
+spotify
+steam
+totem
+ttf-ms-fonts
+virt-manager
+yay
+
+gtk theme: cloudy-softgrey-dark
+icons: tela-dark
