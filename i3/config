@@ -132,10 +132,10 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id /usr/bin/lxpolkit
 
 #Display Wallpaper
-exec feh --bg-fill /home/max/Pictures/wallpaper2.jpg
+exec_always feh --bg-fill /home/max/Pictures/paper.jpg
 
 #Compositor
-exec --no-startup-id picom
+exec --no-startup-id picom --experimental-backends
 
 # Polybar Launch Script
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh 
@@ -154,7 +154,6 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 #custom binds
 bindsym $mod+x exec nautilus
 bindsym $mod+c exec google-chrome-stable
-
 
 #windows stuff
 default_border pixel 5
