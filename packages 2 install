@@ -34,5 +34,7 @@ ttf-ms-fonts
 virt-manager
 yay
 
+nvfbc patch:  https://github.com/keylase/nvidia-patch
+
 gtk theme: cloudy-softgrey-dark
 icons: tela-dark
