@@ -122,13 +122,16 @@ gaps outer 5
 exec --no-startup-id /usr/bin/lxpolkit
 
 #Display Wallpaper
-exec_always feh --bg-fill /home/max/Pictures/paper.jpg
+exec_always feh --bg-fill /home/max/Pictures/paper2.jpg
 
 #Compositor
 exec --no-startup-id picom --experimental-backends
 
 # Polybar Launch Script
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh 
+
+# netowrk applet
+exec_always --no-startup-id nm-applet
 
 #autostart
 exec --no-startup-id spotify 
