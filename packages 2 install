@@ -1,45 +1,45 @@
-packages 2 install
-
-arandr
-ark
+alsa-plugins
+alsa-utils
 bashtop
 bleachbit
+code
 dialog
 eog
 feh
-firefox
 fish
-gnome-disk
+git
+gnome-disk-utility
 gnome-keyring
-gst-libav
-gst-plugins-ugly
+google-chrome
 i3-gaps
 kitty
 libinput
-lxapperance
-lxpolkit
-nautalis
+lxappearance
+nautilus
 neofetch
+network-manager-applet
 noto-fonts
+ntfs-3g
 nvidia
+nvidia-settings
 nvidia-utils
-obs-nvfbc
-obs-studio
 pamac-aur
 pavucontrol
-picom-ibhagwan
+picom-ibhagwan-git
+polkit-gnome
 polybar
-qemu
+pulseaudio
+pulseaudio-alsa
 rofi
-spotify
-steam
 totem
+ttf-apple-emoji
 ttf-ms-fonts
-virt-manager
+xorg-xinit
+xorg-xserver
 yay
 
 nvfbc patch:  https://github.com/keylase/nvidia-patch
 
-gtk theme: cloudy-softgrey-dark
-icons: tela-dark
+gtk theme: cloudy-softgrey-dark https://github.com/i-mint/Cloudy
+icons: tela-dark https://github.com/vinceliuice/Tela-icon-theme
 cursor: https://github.com/ful1e5/apple_cursor
